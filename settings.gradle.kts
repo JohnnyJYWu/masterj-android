@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "masterj-android"
 include(":app")
+include(":base")

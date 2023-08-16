@@ -16,7 +16,7 @@ object Versions {
     const val ANDROIDX_LIFECYCLE_RUNTIME_VERSION = "2.6.1"
     const val ANDROIDX_DATA_BINDING_VERSION = "4.0.1"
 
-    const val MATERIAL_VERSION = "1.5.0"
+    const val MATERIAL_VERSION = "1.9.0"
     const val ANDROID_RECYCLERVIEW_VERSION = "1.2.1"
     const val ANDROID_CONSTRAINT_LAYOUT_VERSION = "2.1.4"
 
@@ -54,4 +54,8 @@ object Libs {
     const val COMPOSE_UI_GRAPHICS = "androidx.compose.ui:ui-graphics"
     const val COMPOSE_UI_TOOLING_PREVIEW = "androidx.compose.ui:ui-tooling-preview"
     const val COMPOSE_MATERIAL3 = "androidx.compose.material3:material3"
+}
+
+object Modules {
+    const val BASE = ":base"
 }
