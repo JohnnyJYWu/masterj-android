@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.masterj.aries"
-    compileSdk = 33
+    compileSdk = Versions.COMPILE_SDK
 
     defaultConfig {
         applicationId = "com.masterj.aries"
-        minSdk = 23
-        targetSdk = 33
+        minSdk = Versions.MIN_SDK
+        targetSdk = Versions.TARGET_SDK
         versionCode = 1
         versionName = "1.0"
 
@@ -38,21 +38,16 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"
     }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
 }
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.10.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
-    implementation("androidx.activity:activity-compose:1.7.2")
-    implementation(platform("androidx.compose:compose-bom:2023.06.01"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
+    implementation(Libs.ANDROIDX_CORE_KTX)
+    implementation(Libs.ANDROIDX_LIFECYCLE_RUNTIME)
+    implementation(Libs.COMPOSE_ACTIVITY)
+    implementation(platform(Libs.COMPOSE_BOM))
+    implementation(Libs.COMPOSE_UI)
+    implementation(Libs.COMPOSE_UI_GRAPHICS)
+    implementation(Libs.COMPOSE_UI_TOOLING_PREVIEW)
+    implementation(Libs.COMPOSE_MATERIAL3)
 }
