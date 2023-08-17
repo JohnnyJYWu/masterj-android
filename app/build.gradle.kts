@@ -3,16 +3,19 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+apply(from = "auto-version.gradle")
+// apply(from = "../auto-lib-version.gradle")
+
 android {
     namespace = "com.masterj.aries"
     compileSdk = Versions.COMPILE_SDK
+    buildToolsVersion = Versions.BUILD_TOOLS_VERSION
 
     defaultConfig {
         applicationId = "com.masterj.aries"
         minSdk = Versions.MIN_SDK
         targetSdk = Versions.TARGET_SDK
-        versionCode = 1
-        versionName = "1.0"
+        multiDexEnabled = true
 
         vectorDrawables {
             useSupportLibrary = true
@@ -20,6 +23,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            isDebuggable = true
+            isMinifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
@@ -33,6 +41,9 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
+        buildConfig = true
+        viewBinding = true
+        dataBinding = true
         compose = true
     }
     composeOptions {
@@ -42,8 +53,22 @@ android {
 
 dependencies {
 
+    implementation(project(Modules.BASE))
+
+    // AndroidX
     implementation(Libs.ANDROIDX_CORE_KTX)
+    implementation(Libs.ANDROIDX_APPCOMPAT)
+    implementation(Libs.ANDROIDX_FRAGMENT_KTX)
+    implementation(Libs.ANDROIDX_ACTIVITY_KTX)
     implementation(Libs.ANDROIDX_LIFECYCLE_RUNTIME)
+    implementation(Libs.ANDROIDX_DATA_BINDING)
+
+    // Material
+    implementation(Libs.MATERIAL)
+    implementation(Libs.ANDROID_RECYCLERVIEW)
+    implementation(Libs.ANDROID_CONSTRAINT_LAYOUT)
+
+    // Compose
     implementation(Libs.COMPOSE_ACTIVITY)
     implementation(platform(Libs.COMPOSE_BOM))
     implementation(Libs.COMPOSE_UI)

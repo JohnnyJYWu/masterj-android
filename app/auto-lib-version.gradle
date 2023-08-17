@@ -1,0 +1,19 @@
+def versionFile = new File(project.projectDir, 'app.conf')
+def calculateVersionName = {
+    versionFile.getText().split("=")[1].trim()
+}
+def calculateVersionCode = {
+    def (versionMajor, versionMinor, versionPatch) = calculateVersionName().split("\\.").collect {
+        Integer.parseInt(it)
+    }
+    versionMajor * 1000000 + versionMinor * 10000 + versionPatch * 100 + 99
+}
+
+android {
+    defaultConfig {
+        versionName = calculateVersionName()
+        versionCode = calculateVersionCode()
+        buildConfigField("long", "VERSION_CODE", "${defaultConfig.versionCode}")
+        buildConfigField("String","VERSION_NAME","\"${defaultConfig.versionName}\"")
+    }
+}
