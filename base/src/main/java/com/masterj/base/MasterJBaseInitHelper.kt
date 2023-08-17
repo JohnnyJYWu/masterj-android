@@ -1,6 +1,7 @@
 package com.masterj.base
 
 import android.app.Application
+import com.masterj.base.lifecycle.GlobalActivityLifecycleCallback
 
 /**
  * Created by Johnny Wu on 2023/8/9
@@ -14,6 +15,8 @@ class MasterJBaseInitHelper {
                     return application
                 }
             }
+
+            MasterJBase.registerActivityLifeCycleCallback(GlobalActivityLifecycleCallback())
         }
     }
 }

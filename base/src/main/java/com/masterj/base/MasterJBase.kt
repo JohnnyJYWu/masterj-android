@@ -16,4 +16,8 @@ object MasterJBase {
     fun getApplication(): Application {
         return baseDelegate.getApplication()
     }
+
+    fun registerActivityLifeCycleCallback(activityLifecycleCallbacks: Application.ActivityLifecycleCallbacks) {
+        getApplication().registerActivityLifecycleCallbacks(activityLifecycleCallbacks)
+    }
 }

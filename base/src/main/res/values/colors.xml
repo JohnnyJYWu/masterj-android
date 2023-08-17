@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--default-->
+    <color name="white" tools:ignore="ResourceName">#FFFFFF</color>
+    <color name="black" tools:ignore="ResourceName">#000000</color>
+    <color name="transparent" tools:ignore="ResourceName">#00000000</color>
+
     <color name="status_bar_default">#000000</color>
 </resources>
