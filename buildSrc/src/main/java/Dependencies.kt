@@ -23,6 +23,10 @@ object Versions {
     // Compose
     const val COMPOSE_ACTIVITY_VERSION = "1.7.2"
     const val COMPOSE_BOM = "2023.06.01"
+
+    // Json
+    const val GSON_VERSION = "2.10.1"
+    const val MOSHI_VERSION = "1.14.0"
 }
 
 object Libs {
@@ -54,6 +58,10 @@ object Libs {
     const val COMPOSE_UI_GRAPHICS = "androidx.compose.ui:ui-graphics"
     const val COMPOSE_UI_TOOLING_PREVIEW = "androidx.compose.ui:ui-tooling-preview"
     const val COMPOSE_MATERIAL3 = "androidx.compose.material3:material3"
+
+    // Json
+    const val GSON = "com.google.code.gson:gson:${Versions.GSON_VERSION}"
+    const val MOSHI = "com.squareup.moshi:moshi-kotlin:${Versions.MOSHI_VERSION}"
 }
 
 object Modules {

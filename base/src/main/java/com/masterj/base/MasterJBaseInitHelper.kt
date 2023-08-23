@@ -9,7 +9,7 @@ import com.masterj.base.lifecycle.GlobalActivityLifecycleCallback
 class MasterJBaseInitHelper {
     companion object {
         @JvmStatic
-        fun initAriesBase(application: Application) {
+        fun initMasterJBase(application: Application) {
             MasterJBase.baseDelegate = object : MasterJBase.BaseDelegate {
                 override fun getApplication(): Application {
                     return application

@@ -50,4 +50,8 @@ dependencies {
     implementation(Libs.COMPOSE_UI_GRAPHICS)
     implementation(Libs.COMPOSE_UI_TOOLING_PREVIEW)
     implementation(Libs.COMPOSE_MATERIAL3)
+
+    // Json
+    implementation(Libs.GSON)
+    implementation(Libs.MOSHI)
 }
