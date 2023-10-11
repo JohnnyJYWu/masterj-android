@@ -22,7 +22,7 @@ object Versions {
 
     // Compose
     const val COMPOSE_ACTIVITY_VERSION = "1.7.2"
-    const val COMPOSE_BOM = "2023.06.01"
+    const val COMPOSE_BOM_VERSION = "2023.06.01"
 
     // Json
     const val GSON_VERSION = "2.10.1"
@@ -53,7 +53,7 @@ object Libs {
 
     // Compose
     const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:${Versions.COMPOSE_ACTIVITY_VERSION}"
-    const val COMPOSE_BOM = "androidx.compose:compose-bom:${Versions.COMPOSE_BOM}"
+    const val COMPOSE_BOM = "androidx.compose:compose-bom:${Versions.COMPOSE_BOM_VERSION}"
     const val COMPOSE_UI = "androidx.compose.ui:ui"
     const val COMPOSE_UI_GRAPHICS = "androidx.compose.ui:ui-graphics"
     const val COMPOSE_UI_TOOLING_PREVIEW = "androidx.compose.ui:ui-tooling-preview"

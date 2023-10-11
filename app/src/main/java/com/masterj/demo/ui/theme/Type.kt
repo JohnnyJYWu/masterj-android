@@ -1,4 +1,4 @@
-package com.masterj.aries.ui.theme
+package com.masterj.demo.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

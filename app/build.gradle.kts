@@ -7,12 +7,12 @@ apply(from = "auto-version.gradle")
 // apply(from = "../auto-lib-version.gradle")
 
 android {
-    namespace = "com.masterj.aries"
+    namespace = "com.masterj.demo"
     compileSdk = Versions.COMPILE_SDK
     buildToolsVersion = Versions.BUILD_TOOLS_VERSION
 
     defaultConfig {
-        applicationId = "com.masterj.aries"
+        applicationId = "com.masterj.demo"
         minSdk = Versions.MIN_SDK
         targetSdk = Versions.TARGET_SDK
         multiDexEnabled = true

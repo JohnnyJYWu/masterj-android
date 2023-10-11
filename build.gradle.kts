@@ -4,3 +4,11 @@ plugins {
     id("org.jetbrains.kotlin.android") version "1.8.10" apply false
     id("com.android.library") version "8.1.0" apply false
 }
+
+ext {
+    set("kotlin_version", Versions.KOTLIN)
+    set("compileSdkVersion", Versions.COMPILE_SDK)
+    set("buildToolsVersion", Versions.BUILD_TOOLS_VERSION)
+    set("minSdkVersion", Versions.MIN_SDK)
+    set("targetSdkVersion", Versions.TARGET_SDK)
+}
