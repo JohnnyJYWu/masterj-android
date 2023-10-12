@@ -1,0 +1,71 @@
+{
+  "image": "picture/2/image.jpg",
+  "audio": "picture/2/audio.mp3",
+  "text": {
+    "englishText": "He takes it home again!",
+    "underlineContents": [
+      {
+        "explain": [],
+        "hints": [],
+        "index": 0,
+        "length": 8,
+        "pronounces": [],
+        "type": 0
+      },
+      {
+        "explain": [],
+        "hints": [],
+        "index": 3,
+        "length": 8,
+        "pronounces": [],
+        "type": 1
+      },
+      {
+        "explain": [],
+        "hints": [],
+        "index": 17,
+        "length": 6,
+        "pronounces": [],
+        "type": 0
+      }
+    ],
+    "chineseText": "他带回了家！ ",
+    "word": [
+      {
+        "begin": 720,
+        "end": 870,
+        "index": 0,
+        "length": 2,
+        "name": "HE"
+      },
+      {
+        "begin": 870,
+        "end": 1200,
+        "index": 3,
+        "length": 5,
+        "name": "TAKES"
+      },
+      {
+        "begin": 1200,
+        "end": 1290,
+        "index": 9,
+        "length": 2,
+        "name": "IT"
+      },
+      {
+        "begin": 1290,
+        "end": 1710,
+        "index": 12,
+        "length": 4,
+        "name": "HOME"
+      },
+      {
+        "begin": 2160,
+        "end": 2880,
+        "index": 17,
+        "length": 5,
+        "name": "AGAIN"
+      }
+    ]
+  }
+}

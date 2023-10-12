@@ -50,6 +50,7 @@ dependencies {
     implementation(Libs.COMPOSE_UI_GRAPHICS)
     implementation(Libs.COMPOSE_UI_TOOLING_PREVIEW)
     implementation(Libs.COMPOSE_MATERIAL3)
+    implementation(Libs.COMPOSE_LIFECYCLE_VIEWMODEL)
 
     // Json
     implementation(Libs.GSON)

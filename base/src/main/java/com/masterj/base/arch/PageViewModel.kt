@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 abstract class PageViewModel<T : BaseData, E : BaseData> : ViewModel() {
@@ -32,12 +33,24 @@ abstract class PageViewModel<T : BaseData, E : BaseData> : ViewModel() {
         }
     }
 
+    fun updateData(pageData: T) {
+        stateFlow.update {
+            stateFlow.value.copy(pageData = pageData)
+        }
+    }
+
     /**
      * 设置当前页面状态
      */
     fun setPageState(pageState: UIState) {
         viewModelScope.launch {
             stateFlow.emit(stateFlow.value.copy(pageState = pageState))
+        }
+    }
+
+    fun updatePageState(pageState: UIState) {
+        stateFlow.update {
+            stateFlow.value.copy(pageState = pageState)
         }
     }
 

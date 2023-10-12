@@ -23,6 +23,7 @@ object Versions {
     // Compose
     const val COMPOSE_ACTIVITY_VERSION = "1.7.2"
     const val COMPOSE_BOM_VERSION = "2023.06.01"
+    const val COMPOSE_LIFECYCLE_VIEWMODEL_VERSION = "2.6.1"
 
     // Json
     const val GSON_VERSION = "2.10.1"
@@ -58,6 +59,7 @@ object Libs {
     const val COMPOSE_UI_GRAPHICS = "androidx.compose.ui:ui-graphics"
     const val COMPOSE_UI_TOOLING_PREVIEW = "androidx.compose.ui:ui-tooling-preview"
     const val COMPOSE_MATERIAL3 = "androidx.compose.material3:material3"
+    const val COMPOSE_LIFECYCLE_VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-compose:${Versions.COMPOSE_LIFECYCLE_VIEWMODEL_VERSION}"
 
     // Json
     const val GSON = "com.google.code.gson:gson:${Versions.GSON_VERSION}"
