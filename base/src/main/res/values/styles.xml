@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Animation.ActivityTransition" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/base_anim_alpha_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/base_anim_alpha_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/base_anim_alpha_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/base_anim_alpha_out</item>
+    </style>
+
+    <style name="Base.Theme.AppCompat.Common" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimaryDark" tools:ignore="NewApi">#FFFFFF</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/Base.Animation.ActivityTransition</item>
+    </style>
+
+    <style name="BaseFullScreenActivity" parent="Base.Theme.AppCompat.Common">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>
