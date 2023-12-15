@@ -1,5 +1,6 @@
 package com.masterj.demo
 
+import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -19,6 +20,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.unit.dp
+import com.masterj.base.utils.UIUtils
 import kotlin.math.sin
 
 @Composable
@@ -47,7 +49,7 @@ private fun EnglishSentenceComposeText(
 ) {
     var onDraw: DrawScope.() -> Unit by remember { mutableStateOf({}) }
     val path by remember { mutableStateOf(Path()) }
-    Text(
+    ClickableText(
         text = buildAnnotatedString {
             append(text)
             coloredText?.let {
@@ -57,6 +59,9 @@ private fun EnglishSentenceComposeText(
                     end = it.second
                 )
             }
+        },
+        onClick = { offset ->
+            UIUtils.toast("click $offset")
         },
         style = TextStyle(
             color = Color(0xFF191919),
