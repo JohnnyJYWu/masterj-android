@@ -7,6 +7,7 @@ dependencies {
 }
 
 android {
+    namespace "com.masterj.unitylibrary"
     ndkPath "/Users/wujingyuan/Library/Android/sdk/ndk/23.1.7779620"
 
     compileSdkVersion 32
