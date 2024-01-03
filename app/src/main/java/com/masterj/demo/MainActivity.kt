@@ -8,6 +8,7 @@ import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.Window
 import com.masterj.base.activity.BaseViewActivity
+import com.masterj.base.utils.UIUtils
 import com.masterj.demo.databinding.ActivityMainBinding
 import com.unity3d.player.IUnityPlayerLifecycleEvents
 import com.unity3d.player.MultiWindowSupport
@@ -40,8 +41,25 @@ class MainActivity : BaseViewActivity<ActivityMainBinding>(), IUnityPlayerLifecy
         intent.putExtra("unity", cmdLine)
 
         mUnityPlayer = UnityPlayer(this, this)
-        setContentView(mUnityPlayer)
+        binding.flUnityContainer.addView(mUnityPlayer)
         mUnityPlayer.requestFocus()
+
+        binding.tvUnityText.setOnClickListener {
+            sendUnityMessage(binding.tvUnityText.text.toString())
+        }
+    }
+
+    fun unityToast(msg: Int) { // unity->native, 方法名、参数类型必须完全一致才能找到方法，否则unity会报错
+        binding.root.post { // unity线程不同，需切换主线程
+            binding.tvUnityText.text = msg.toString()
+            UIUtils.toast(msg.toString())
+        }
+    }
+
+    fun sendUnityMessage(msg: String) {
+        // native->unity, 通过UnityPlayer.UnitySendMessage("GameObjectName", "MethodName", "Message to send");
+        // MethodName: 为unity中的方法名，参数类型必须完全一致才能找到方法
+        UnityPlayer.UnitySendMessage("GameManager", "ReceiveMessage", msg)
     }
 
     // When Unity player unloaded move task to background
