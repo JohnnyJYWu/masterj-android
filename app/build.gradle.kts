@@ -20,6 +20,14 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        ndk {
+            abiFilters.apply {
+                add("armeabi-v7a")
+//                add("arm64-v8a")
+                add("x86")
+            }
+        }
     }
 
     buildTypes {
@@ -75,4 +83,5 @@ dependencies {
     implementation(Libs.COMPOSE_UI_GRAPHICS)
     implementation(Libs.COMPOSE_UI_TOOLING_PREVIEW)
     implementation(Libs.COMPOSE_MATERIAL3)
+    implementation(files("libs/unity-classes.jar"))
 }
