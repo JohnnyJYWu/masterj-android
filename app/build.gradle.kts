@@ -84,6 +84,10 @@ dependencies {
     implementation(Libs.COMPOSE_UI_GRAPHICS)
     implementation(Libs.COMPOSE_UI_TOOLING_PREVIEW)
     implementation(Libs.COMPOSE_MATERIAL3)
-    implementation(files("../unityLibrary/libs/unity-classes.jar"))
-    implementation(project(":unityLibrary"))
+
+    // import all jars and aars in libs folder
+//    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
+//    implementation(files("../unityLibrary/libs/unity-classes.jar"))
+//    implementation(project(":unityLibrary"))
+    implementation(files("libs/unityLibrary-debug.aar"))
 }
